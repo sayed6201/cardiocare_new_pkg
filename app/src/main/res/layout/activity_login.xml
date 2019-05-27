@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EAF0F1">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="40dp"
+        android:layout_centerHorizontal="true"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:cardElevation="@dimen/_10sdp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log In "
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_gravity="center">
+
+
+            <EditText
+                android:id="@+id/id_et_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Patient ID or Cell Number"
+                android:layout_marginBottom="10dp"
+                android:maxLines="1"
+                />
+
+
+            <EditText
+                android:id="@+id/pass_et_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Password"
+                android:layout_marginBottom="10dp"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:id="@+id/logBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:onClick="loginClick"
+                android:background="#30336B"
+                android:textColor="#ffffff"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="15dp"/>
+
+            <CheckBox
+                android:id="@+id/rememberPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember Log in information"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Don't Have account?"
+                android:textColor="#30336B"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/to_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textAlignment="center"
+                android:onClick="trigger"
+                android:background="@drawable/buttonstyle"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                />
+            <!--<ImageView-->
+                <!--android:id="@+id/to_register"-->
+                <!--android:layout_width="@dimen/_40sdp"-->
+                <!--android:layout_height="@dimen/_40sdp"-->
+                <!--android:src="@drawable/reg"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:onClick="trigger"-->
+                <!--android:layout_marginTop="@dimen/_3sdp"/>-->
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="40dp"
+        android:layout_centerHorizontal="true"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        android:visibility="gone"
+        app:cardElevation="@dimen/_10sdp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registration "
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_gravity="center">
+
+
+            <EditText
+                android:id="@+id/mobile_num_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Cell number"
+                android:layout_marginBottom="10dp"/>
+
+
+            <EditText
+                android:id="@+id/id_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Patient Id"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/registerBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:onClick="registrationClick"
+                android:background="#25CCF7"
+                android:textColor="#ffffff"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Have account?"
+                android:textColor="#30336B"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"
+                />
+
+            <TextView
+                android:id="@+id/to_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:onClick="trigger"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/buttonstyle"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+</ScrollView>

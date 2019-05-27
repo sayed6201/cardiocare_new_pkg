@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#EAF0F1"
+    >
+
+    <!--<Spinner-->
+        <!--android:id="@+id/speciality_spinner"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:backgroundTint="@color/colorPrimary"-->
+        <!--android:textColorHint="#05ab9a"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:background="@drawable/round_corner"-->
+        <!--android:elevation="07dp"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:padding="10dp"-->
+        <!--android:textAlignment="center" />-->
+
+
+    <Spinner
+        android:id="@+id/speciality_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_corner"
+        android:elevation="07dp"
+        android:fitsSystemWindows="true"
+        android:padding="10dp"
+        android:textAlignment="center" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycleListView">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

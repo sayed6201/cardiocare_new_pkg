@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_settings_power_24dp"
+            android:title="Log out" />
+        <item
+            android:id="@+id/nav_pass_change"
+            android:icon="@drawable/ic_vpn_key_black_24dp"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/nav_appointment"
+            android:icon="@drawable/ic_time_24dp"
+            android:title="Book Appointment" />
+
+        <item
+            android:id="@+id/nav_prescription"
+            android:icon="@drawable/ic_receipt_black_24dp"
+            android:title="Your Prescriptions" />
+
+        <item
+            android:id="@+id/nav_invoice"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="Consultation history" />
+
+        <item
+            android:id="@+id/nav_doc_info"
+            android:icon="@drawable/ic_doctor_24dp"
+            android:title="Doctor's information" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_call_black_24dp"
+                android:title="Contact us" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_company"
+                android:icon="@drawable/ic_developer__24dp"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

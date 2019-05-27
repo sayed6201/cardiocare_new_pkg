@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.daffodil.cardiocare">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.daffodil.cardiocare.app.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_cardiocare"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_cardiocare_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.daffodil.cardiocare.ImagePickerActivity"></activity>
+        <activity android:name="com.daffodil.cardiocare.ImgaeUploadActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name="com.daffodil.cardiocare.DSLActivity" />
+        <activity android:name="com.daffodil.cardiocare.PackageActivity" />
+        <activity
+            android:name="com.daffodil.cardiocare.ScrollingTESTERActivity"
+            android:label="@string/title_activity_scrolling_tester"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.daffodil.cardiocare.WebActivity" />
+        <activity android:name="com.daffodil.cardiocare.ReceiptActivity" />
+        <activity android:name="com.daffodil.cardiocare.ContactActivity" />
+        <activity android:name="com.daffodil.cardiocare.DeveloperActivity" />
+        <activity
+            android:name="com.daffodil.cardiocare.PatientProfileActivity"
+            android:label="Cardio Care"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.daffodil.cardiocare.SplashActivity"
+            android:label="Cardio care"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.daffodil.cardiocare.HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver android:name="com.daffodil.cardiocare.utils.CheckConnectivity">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.daffodil.cardiocare.TestActivity" />
+        <activity android:name="com.daffodil.cardiocare.LabReportDetailActivity" />
+        <activity android:name="com.daffodil.cardiocare.PatientDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daffodil.cardiocare.HomeActivity" />
+        </activity>
+        <activity android:name="com.daffodil.cardiocare.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daffodil.cardiocare.HomeActivity" />
+        </activity>
+        <activity android:name="com.daffodil.cardiocare.RegistrationActivity" />
+        <activity android:name="com.daffodil.cardiocare.AppointmentActivity" />
+        <activity android:name="com.daffodil.cardiocare.TimeSlotActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daffodil.cardiocare.MainActivity" />
+        </activity>
+        <activity android:name="com.daffodil.cardiocare.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daffodil.cardiocare.HomeActivity" />
+        </activity>
+
+         <activity
+         android:name="com.yalantis.ucrop.UCropActivity"
+         android:screenOrientation="portrait"
+         android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider" />
+        </provider>
+    </application>
+
+</manifest>
